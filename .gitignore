@@ -1,0 +1,6 @@
+*.o
+*.hi
+
+/Main
+/x
+/x.asm
