@@ -89,7 +89,4 @@ fetchAndDecode = do
         0xc3 -> Ret
 
 disasm :: CpuState [Instruction]
-disasm = do
-    insn <- fetchAndDecode
-    rest <- disasm
-    return (insn:rest)
+disasm = sequence $ repeat fetchAndDecode
